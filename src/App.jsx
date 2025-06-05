@@ -18,7 +18,7 @@ function App() {
 
   // }
   const getdata = async (city) => {
-    let req = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1` + `&appid=${key}`)
+    let req = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1` + `&appid=${key}`)
     let res = await req.json()
     // console.log(res)
     if (res.length > 0) {
@@ -93,7 +93,7 @@ function App() {
               <h1 className="text-2xl md:text-3xl font-semibold"><i class="fa-solid fa-location-dot text-white"></i> {city}</h1>
               <h1 className="text-2xl md:text-3xl font-semibold"><i class="fa-solid fa-calendar-week"></i> {getDayName()} </h1>
             </div>
-            <img src="src/assets/cloudy.png" alt="" className='h-20' />
+            <img src="./assets/cloudy.png" alt="" className='h-20' />
           </div>
           <div className='flex lg:gap-9 flex-col items-center lg:flex-row my-10'>
             <div className='mt-5'>
